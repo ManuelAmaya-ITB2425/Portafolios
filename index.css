@@ -1,0 +1,247 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo Base */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/*Estilo del header*/
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #515a5a;
+    color: white;
+}
+
+header img {
+    height: auto;
+    width: 5%;
+
+}
+
+header h1 {
+    font-size: 2rem;
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 50px;
+}
+
+/*Estilo del Nav*/
+nav {
+    padding: 10px 20px;
+    justify-content: center;
+}
+
+nav a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #af7ac5;
+    background-color: #eaeded;
+}
+
+/*Estilo del main*/
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+/*Estilo del section*/
+section {
+    padding: 20px;
+    margin: 10px 0;
+    height: 400px;
+    position: relative;
+}
+
+/* Secion interactiva */
+#interactivo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #ff0000;
+    border-radius: 20px;
+}
+
+.encabezado h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo de cada muñeco */
+.muneco {
+    text-align: center;
+}
+
+/* Estilo de la cara */
+.cara-manuel {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: #5133ff; 
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo de los ojos */
+.ojo {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #000;
+    transition: transform 0.1s ease-out;
+}
+
+#ojo1 {
+    left: 25px;
+}
+
+#ojo2 {
+    right: 25px;
+}
+
+.ojo::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Estilo para los enlaces con imagenes*/
+#apartados {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.titulo-apartados {
+    text-align: center;
+    width:63%;
+    margin-bottom: 20px;
+}
+
+.titulo-apartados h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.apartado {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.apartado img {
+    max-width: 150px;
+    height: auto;
+}
+
+.apartado p {
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 5px;
+}
+
+/*Estilo del formulario*/
+.formulario {
+    background-color: #d29bfd;
+    color: #3a00ff;
+    padding: 20px;
+    text-align: left;
+    border-radius: 20px;
+}
+.formulario input[type="text"],
+.formulario input[type="submit"] {
+    background-color: #cdcdcd;
+    color: #3a00ff;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.formulario input[type="submit"]:hover {
+    background-color: white;
+    color: #46a1fc;
+}
+
+/*Estilo del footer*/
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        padding: 15px;
+    }
+    header img {
+        width: 30%;
+    }
+    #apartados {
+        flex-direction: column; /* Los apartados se apilan */
+        gap: 10px; /* Espaciado reducido en dispositivos pequeños */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    nav a {
+        font-size: 0.8rem;
+    }
+    .apartado img {
+        max-width: 120px; /* Las imágenes se ajustan más en pantallas pequeñas */
+    }
+}
