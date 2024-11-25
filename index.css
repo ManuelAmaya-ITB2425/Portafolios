@@ -378,35 +378,47 @@ footer {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
     }
-    nav {
-        flex-direction: column;
-        align-items: center;
+    
+    header img {
+        width: 100px; /* Reduce la imagen en pantallas pequeñas */
     }
-    nav a {
+
+    .hamburger-icon {
+        display: block;
+    }
+
+    .apartado {
+        flex-basis: 48%; /* Dos elementos por fila */
+    }
+
+    .formulario {
         padding: 15px;
     }
-    header img {
-        width: 30%;
-    }
-    #apartados {
-        flex-direction: column; /* Los apartados se apilan */
-        gap: 10px; /* Espaciado reducido en dispositivos pequeños */
+
+    .tabla {
+        font-size: 0.9rem;
     }
 }
 
+/* Pantallas muy pequeñas */
 @media (max-width: 480px) {
-    body {
-        font-size: 0.9rem;
-    }
     header h1 {
         font-size: 1.5rem;
     }
-    nav a {
-        font-size: 0.8rem;
+
+    .apartado {
+        flex-basis: 100%; /* Un solo elemento por fila */
+        margin-bottom: 20px;
     }
-    .apartado img {
-        max-width: 120px; /* Las imágenes se ajustan más en pantallas pequeñas */
+
+    .formulario {
+        padding: 10px;
+    }
+
+    .hamburger-icon {
+        width: 25px;
+        height: 18px;
     }
 }
