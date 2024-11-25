@@ -4,17 +4,32 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale+1.0">
         <title>TA04 Pagina web</title>
-        <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="../CSS/portafolios.css">
     </head>
     <body>
         <header>
-            <img src="/Logo.png">
+            <img src="../Imagenes/Logo.png">
             <h1>Chachoooooooo</h1>
             <nav>
-                <a href="./listado.html" target="_blank">Listado</a>
-                <a href="./pagina1.html" target="_blank">Pagina 1</a>
-                <a href="./pagina2.html" target="_blank">Pagina 2</a>
-            </nav>
+                <ul>
+                    <li class="dropdown">
+                        <div class="hamburger-icon" onclick="toggleMenu()">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="dropdown-content">
+                            <a href="./listado.html" target="_blank">Listado</a>
+                            <a href="./pagina1.html" target="_blank">Pagina 1</a>
+                            <a href="./pagina2.html" target="_blank">Pagina 2</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>            
+            <label class="switch">
+                <input type="checkbox" id="toggle-theme">
+                <span class="slider"></span>
+            </label>
         </header> 
         <main>
             <section id="interactivo">
@@ -36,7 +51,7 @@
                 <!-- Primer apartado -->
                 <div class="apartado">
                     <a href="./pagina1.html" target="_blank">
-                        <img src="/Imagen1.png" alt="Imagen 1">
+                        <img src="../Imagenes/Imagen1.png" alt="Imagen 1">
                     </a>
                     <p>PROYECTO 1</p>
                     <p>Texto</p>
@@ -44,16 +59,26 @@
                 <!-- Segundo apartado -->
                 <div class="apartado">
                     <a href="./pagina2.html" target="_blank">
-                        <img src="/Imagen2.png" alt="Imagen 2">
+                        <img src="../Imagenes/Imagen2.png" alt="Imagen 2">
                     </a>
                     <p>PROYECTO 2</p>
                     <p>Texto</p>
                 </div>
             </section>
-                        <form class="formulario">
-                <label for="fname">Ecriba una sugerencia:</label><br>
-                <input type="text" id="fname" name="fname"><br>
-                <input type="submit" value="Enviar">
+            <form class="formulario">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required placeholder="Introduce tu correo electrónico"><br>
+                
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Introduce tu nombre"><br>
+                
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required placeholder="Introduce tus apellidos"><br>
+                
+                <label for="mensaje">Cuerpo del mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí..."></textarea><br>
+                
+                <button type="submit">Enviar</button>
             </form>
         </main>
         <footer>
@@ -62,6 +87,6 @@
             <p>Facebook: ---</p>
             <p>Twitter: ---</p>
         </footer>
-        <script src="./index.js"></script>
+        <script src="../JavaScript/portafolios.js"></script>
     </body>
 </html>
