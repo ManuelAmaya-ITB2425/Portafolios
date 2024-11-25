@@ -49,7 +49,8 @@ toggleCheckbox.addEventListener('change', function() {
     document.querySelector('.formulario').classList.toggle('dark-mode');
 });
 
-function toggleMenu() {
+document.querySelector('.hamburger-icon').addEventListener('click', function() {
     const dropdown = document.querySelector('.dropdown');
     dropdown.classList.toggle('open');
-}
+});
+
