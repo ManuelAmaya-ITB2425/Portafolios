@@ -29,3 +29,27 @@ document.addEventListener('mousemove', function(event) {
         });
     });
 });
+
+const formulario = document.querySelector('.formulario');
+const inputs = formulario.querySelectorAll('input, textarea');
+
+inputs.forEach(input => {
+    input.addEventListener('input', function() {
+        if (this.checkValidity()) {
+            this.style.borderColor = 'green';
+        } else {
+            this.style.borderColor = 'red';
+        }
+    });
+});
+
+const toggleCheckbox = document.getElementById('toggle-theme');
+toggleCheckbox.addEventListener('change', function() {
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('.formulario').classList.toggle('dark-mode');
+});
+
+function toggleMenu() {
+    const dropdown = document.querySelector('.dropdown');
+    dropdown.classList.toggle('open');
+}
