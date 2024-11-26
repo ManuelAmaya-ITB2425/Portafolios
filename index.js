@@ -1,3 +1,4 @@
+// Para que la ojos de la cara sigan el movimiento del raton
 document.addEventListener('mousemove', function(event) {
     // Obtener la posición del ratón
     const mouseX = event.clientX;
@@ -30,6 +31,7 @@ document.addEventListener('mousemove', function(event) {
     });
 });
 
+// Para validar que el formulario
 const formulario = document.querySelector('.formulario');
 const inputs = formulario.querySelectorAll('input, textarea');
 
@@ -43,7 +45,7 @@ inputs.forEach(input => {
     });
 });
 
-// Función para cambiar las imágenes cuando se activa o desactiva el modo oscuro
+// Para cambiar las imágenes cuando se activa o desactiva el modo oscuro
 function toggleDarkModeImages() {
     const images = document.querySelectorAll('.apartado img');
 
@@ -67,7 +69,7 @@ function toggleDarkModeImages() {
     });
 }
 
-// Agregar evento al cambio del tema
+// Agregar evento al cambio del tema Modo oscuro - Modo Claro
 const toggleCheckbox = document.getElementById('toggle-theme');
 toggleCheckbox.addEventListener('change', function() {
     // Cambiar el modo oscuro en el body
@@ -83,6 +85,7 @@ if (document.body.classList.contains('dark-mode')) {
     toggleDarkModeImages();
 }
 
+// Para animar las imagenes de los enlaces, cuando pase el raton por encima se agrandara
 const apartados = document.querySelectorAll('.apartado');
 
 apartados.forEach(apartado => {
@@ -99,4 +102,15 @@ apartados.forEach(apartado => {
 document.querySelector('.hamburger-icon').addEventListener('click', function() {
     const dropdown = document.querySelector('.dropdown');
     dropdown.classList.toggle('open');
+});
+
+
+// Para que cuando se apret al boton ver mas se muestre una pequeña descripcion
+const verMasButtons = document.querySelectorAll('.ver-mas');
+
+verMasButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const detalles = button.nextElementSibling; // El div .detalles
+        detalles.style.display = detalles.style.display === 'block' ? 'none' : 'block';
+    });
 });
