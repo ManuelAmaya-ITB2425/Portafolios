@@ -18,15 +18,24 @@ body {
 /*Poner la pagina en modo oscuro*/
 body.dark-mode {
     background-color: #333;
-    color: #fff;
+    color: white;
 }
 
 body.dark-mode .apartado p {
-    color: #fff;
+    color: white;
+}
+
+body.dark-mode .encabezado h2 {
+    color: white;
+}
+
+body.dark-mode .cara-manuel {
+    background-color: #184198;
 }
 
 .formulario.dark-mode {
     background-color: #444;
+    color: white;
 }
 
 .switch {
@@ -88,6 +97,7 @@ header {
 header img {
     height: auto;
     width: 5%;
+    max-width: 100%;
 
 }
 
@@ -211,7 +221,6 @@ section {
     align-items: center;
     padding: 10px;
     margin: 20px 0;
-    background-color: #ff0000;
     border-radius: 20px;
 }
 
@@ -232,7 +241,7 @@ section {
     position: relative;
     width: 80px;
     height: 80px;
-    background-color: #5133ff; 
+    background-color: #e7be67; 
     border-radius: 50%;
     margin-bottom: 10px;
     border: 2px solid #000;
@@ -284,7 +293,7 @@ section {
 
 .titulo-apartados {
     text-align: center;
-    width:63%;
+    width: 57%;
     margin-bottom: 20px;
 }
 
@@ -301,7 +310,7 @@ section {
 }
 
 .apartado img {
-    max-width: 150px;
+    max-width: 50%;
     height: auto;
 }
 
