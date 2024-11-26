@@ -239,8 +239,8 @@ section {
 /* Estilo de la cara */
 .cara-manuel {
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
     background-color: #e7be67; 
     border-radius: 50%;
     margin-bottom: 10px;
@@ -253,8 +253,8 @@ section {
 /* Estilo de los ojos */
 .ojo {
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 25px;
+    height: 25px;
     background-color: #fff;
     border-radius: 50%;
     border: 1px solid #000;
@@ -262,11 +262,11 @@ section {
 }
 
 #ojo1 {
-    left: 25px;
+    left: 35px;
 }
 
 #ojo2 {
-    right: 25px;
+    right: 35px;
 }
 
 .ojo::after {
