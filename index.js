@@ -49,6 +49,19 @@ toggleCheckbox.addEventListener('change', function() {
     document.querySelector('.formulario').classList.toggle('dark-mode');
 });
 
+const apartados = document.querySelectorAll('.apartado');
+
+apartados.forEach(apartado => {
+    apartado.addEventListener('mouseover', function() {
+        apartado.style.transform = 'scale(1.1)';
+        apartado.style.transition = 'transform 0.3s ease';
+    });
+
+    apartado.addEventListener('mouseout', function() {
+        apartado.style.transform = 'scale(1)';
+    });
+});
+
 document.querySelector('.hamburger-icon').addEventListener('click', function() {
     const dropdown = document.querySelector('.dropdown');
     dropdown.classList.toggle('open');
