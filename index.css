@@ -33,6 +33,14 @@ body.dark-mode .dropdown-content a:hover {
     background-color: #aea5a5;
 }
 
+body.dark-mode #interactivo {
+    background-color: #444;
+}
+
+body.dark-mode #apartados {
+    background-color: #444;
+}
+
 body.dark-mode .apartado p {
     color: white;
 }
