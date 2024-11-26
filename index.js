@@ -43,11 +43,45 @@ inputs.forEach(input => {
     });
 });
 
+// Función para cambiar las imágenes cuando se activa o desactiva el modo oscuro
+function toggleDarkModeImages() {
+    const images = document.querySelectorAll('.apartado img');
+
+    // Verificar si el cuerpo tiene la clase 'dark-mode'
+    const isDarkMode = document.body.classList.contains('dark-mode');
+
+    images.forEach(img => {
+        // Recuperar la URL original desde 'data-src' (si no existe, la URL actual de la imagen será la original)
+        const originalSrc = img.getAttribute('data-src') || img.src.split('?')[0]; // Si no tiene 'data-src', usamos la URL actual
+
+        // Obtener la imagen para el modo oscuro desde el atributo 'data-dark-src'
+        const darkImage = img.getAttribute('data-dark-src');
+
+        if (isDarkMode) {
+            // Si está en modo oscuro, cambiar la imagen a la versión oscura
+            img.src = darkImage;
+        } else {
+            // Si está en modo claro, volver a la imagen original
+            img.src = originalSrc;
+        }
+    });
+}
+
+// Agregar evento al cambio del tema
 const toggleCheckbox = document.getElementById('toggle-theme');
 toggleCheckbox.addEventListener('change', function() {
+    // Cambiar el modo oscuro en el body
     document.body.classList.toggle('dark-mode');
     document.querySelector('.formulario').classList.toggle('dark-mode');
+    
+    // Llamar a la función para cambiar las imágenes
+    toggleDarkModeImages();
 });
+
+// Llamar a la función al cargar la página para aplicar la imagen correcta si el tema ya está activado
+if (document.body.classList.contains('dark-mode')) {
+    toggleDarkModeImages();
+}
 
 const apartados = document.querySelectorAll('.apartado');
 
