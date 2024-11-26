@@ -66,4 +66,3 @@ document.querySelector('.hamburger-icon').addEventListener('click', function() {
     const dropdown = document.querySelector('.dropdown');
     dropdown.classList.toggle('open');
 });
-
