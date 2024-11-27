@@ -53,6 +53,10 @@ body.dark-mode .cara-manuel {
     background-color: #184198;
 }
 
+body.dark-mode .detalles {
+    background-color: black;
+}
+
 .formulario.dark-mode {
     background-color: #444;
     color: white;
@@ -96,6 +100,7 @@ body.dark-mode footer {
     background-color: black;
 }
 
+/* Deslizador del modo oscuro */
 .switch {
     position: relative;
     display: inline-block;
