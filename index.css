@@ -155,6 +155,9 @@ header {
     padding: 20px;
     background-color: #f5765e;
     color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header img {
