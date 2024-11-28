@@ -1,0 +1,263 @@
+/* indexportfolio.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #F5F5F5;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f5765e;
+  color: white;
+  padding: 1% 0; 
+  z-index: 1000;
+  box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.2); 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1%;
+  padding-right: 1%;
+  flex-wrap: wrap;
+}
+
+header img {
+  height: 10vh;
+  margin-right: 2%;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(1rem, 8vw, 2rem);
+  display: inline-block;
+  vertical-align: middle;
+  color: white;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 5%;
+  font-size: clamp(1rem, 1.5rem, 2rem); /* Ajuste dinámico */
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #FFB6B9;
+}
+
+/* Espaciado para el contenido debajo del header */
+main {
+  padding-top: 10vh; /* Aproximadamente 120px convertido a vh */
+}
+
+h2 {
+  color: white;
+  margin-bottom: 5%;
+  font-size: clamp(5vw, 8vw, 20px); /* Ajuste dinámico entre 24px y 60px */
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.5vw solid #333; /* Aproximadamente 4px convertido a vw */
+  width: 0;
+  animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+      border-color: transparent;
+  }
+}
+
+/* Sección de la Galería de Proyectos */
+.section-1, .section-2 {
+  padding: 8%;
+  margin-bottom: 5%;
+  border-radius: 1%;
+  box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.1); 
+  width: 100%;
+  background-color: #33ffe2;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-2 {
+  background-color: #33ffe2;
+}
+
+/* Contenedor de los proyectos */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  max-width: 80vw; /* Limitamos el ancho máximo */
+  padding: 5%;
+  background-color: bisque;
+  border-radius: 1%;
+  box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.1); 
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  display: inline-block;
+  padding: 5% 6%; 
+  margin-top: 5%;
+  background-color: #FFE156;
+  color: #0da399;
+  text-decoration: none;
+  font-size: clamp(16px, 6vw, 25px); /* Ajuste dinámico entre 16px y 25px */
+  border-radius: 80px;
+  box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s ease, transform 0.5s ease;
+}
+
+.button:hover {
+  background-color: #e3c27b;
+}
+
+.proyectos-lista {
+  font-size: clamp(20px, 8vw, 40px); /* Ajuste dinámico */
+  color: white;
+  font-weight: bold;
+  text-shadow: 3% 3% 8% rgba(0, 0, 0, 0.3);
+  margin-top: 5%; 
+}
+
+.formulario-seccion {
+  background-color: #33ffe2;
+  padding: 8%; 
+  color: white;
+  border-radius: 1%;
+  box-shadow: 0 0.5% 2% rgba(0, 0, 0, 0.2); 
+  margin-top: 5%; 
+  width: 95%;
+  max-width: 80vw;
+  margin-bottom: 5%;
+  text-align: left;
+  font-family: sans-serif;
+}
+
+.formulario-seccion h3 {
+  font-size: clamp(20px, 8vw, 30px); /* Ajuste dinámico */
+  color: white;
+  margin-bottom: 5%;
+}
+
+.formulario-seccion input,
+.formulario-seccion textarea {
+  width: 100%;
+  padding: 4%; 
+  margin-bottom: 4%; 
+  border-radius: 1%;
+  border: 0.5% solid #ddd;
+  font-size: clamp(14px, 4vw, 18px); /* Ajuste dinámico */
+  background-color: #fff;
+  color: #333;
+  font-family: sans-serif;
+}
+
+.formulario-seccion textarea {
+  height: 20vh; /* Convertido a vh */
+  resize: vertical;
+}
+
+.formulario-seccion button {
+  background-color: white;
+  color: black;
+  font-size: clamp(16px, 5vw, 20px); /* Ajuste dinámico */
+  padding: 4% 8%;
+  border: 2px solid black;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-seccion button:hover {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+.button-container {
+  margin-bottom: 5%; 
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2%; 
+  margin-top: auto;
+}
+
+footer a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header {
+      justify-content: flex-start; /* Alinea todo a la izquierda */
+      flex-wrap: nowrap; /* Evita que los elementos se envuelvan en varias filas */
+  }
+
+  header h1 {
+      font-size: 1.2rem;
+  }
+
+  .button {
+      font-size: 8vw; 
+  }
+
+  .formulario-seccion input,
+  .formulario-seccion textarea {
+      font-size: 5vw;
+  }
+
+  .proyectos-lista {
+      font-size: 8vw;
+  }
+}
