@@ -15,12 +15,13 @@ body {
 }
 
 /* Header */
+
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #f5765e;
+  background-color: #333;
   color: white;
   padding: 1% 0; 
   z-index: 1000;
@@ -72,7 +73,7 @@ main {
 }
 
 h2 {
-  color: white;
+  color: #FFB6B9;
   margin-bottom: 5%;
   font-size: clamp(5vw, 8vw, 20px); /* Ajuste dinámico entre 24px y 60px */
   text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
@@ -115,7 +116,7 @@ h2 {
 }
 
 .section-2 {
-  background-color: #33ffe2;
+  background-color: #86cee4;
 }
 
 /* Contenedor de los proyectos */
@@ -126,7 +127,7 @@ h2 {
   width: 95%;
   max-width: 80vw; /* Limitamos el ancho máximo */
   padding: 5%;
-  background-color: bisque;
+  background-color: #f0ff33;
   border-radius: 1%;
   box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.1); 
   margin-top: 5%;
@@ -153,16 +154,16 @@ h2 {
 
 .proyectos-lista {
   font-size: clamp(20px, 8vw, 40px); /* Ajuste dinámico */
-  color: white;
+  color: #333333;
   font-weight: bold;
   text-shadow: 3% 3% 8% rgba(0, 0, 0, 0.3);
   margin-top: 5%; 
 }
 
 .formulario-seccion {
-  background-color: #33ffe2;
+  background-color: #a8ff33;
   padding: 8%; 
-  color: white;
+  color: #333;
   border-radius: 1%;
   box-shadow: 0 0.5% 2% rgba(0, 0, 0, 0.2); 
   margin-top: 5%; 
@@ -175,7 +176,7 @@ h2 {
 
 .formulario-seccion h3 {
   font-size: clamp(20px, 8vw, 30px); /* Ajuste dinámico */
-  color: white;
+  color: black;
   margin-bottom: 5%;
 }
 
@@ -198,20 +199,18 @@ h2 {
 }
 
 .formulario-seccion button {
-  background-color: white;
-  color: black;
+  background-color: #f97861;
+  color: white;
   font-size: clamp(16px, 5vw, 20px); /* Ajuste dinámico */
   padding: 4% 8%;
-  border: 2px solid black;
+  border: none;
   border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .formulario-seccion button:hover {
-  background-color: black;
-  color: white;
-  border: 2px solid white;
+  background-color: #ff8800;
 }
 
 .button-container {

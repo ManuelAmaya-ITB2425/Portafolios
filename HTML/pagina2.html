@@ -3,27 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pàgina de Projecte</title>
+    <title>Pagina 2</title>
     <link rel="stylesheet" href="../CSS/pagina2.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <script>
-        // JavaScript para manejar el menú mòbil
-        function toggleMenu() {
-            const nav = document.querySelector('.nav');
-            nav.classList.toggle('active');
-        }
-
-        // Bolita que persigue al cursor
-        document.addEventListener('DOMContentLoaded', () => {
-            const cursor = document.createElement('div');
-            cursor.classList.add('cursor-follow');
-            document.body.appendChild(cursor);
-
-            document.addEventListener('mousemove', (e) => {
-                cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
-            });
-        });
-    </script>
+    <script src="../JavaScript/pagina2.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -32,9 +15,10 @@
         </div>
         <h1>Manuel Amaya</h1>
         <nav class="nav">
-            <a href="../index.html">Inici</a>
-            <a href="./listado.html">Listado de Projectes</a>
-            <a href="#contacte">Contacte</a>
+            <a href="../index.html">Inicio</a>
+            <a href="./listado.html">Listado</a>
+            <a href="./pagina1.html">Pagina 1</a>
+            <a href="./pagina2.html">Pagina 2</a>
         </nav>
         <div class="menu-toggle" onclick="toggleMenu()">
             <span class="bar"></span>
@@ -44,36 +28,39 @@
     </header>
     <main class="main">
         <section class="title">
-            <h1>Projecte 2: Creació d'una marca de roba</h1>
+            <h1>Proyecto:  Ayuda a el Rio Besos</h1>
         </section>
         <article class="description">
             <p>
-                En aquest projecte, fet a batxillerat com a treball de recerca, vaig fer una simulació d’una marca de roba.
+                En este proyecto los decididos a ayudar al Rio Besos, uno de los ríos que conecta varios municipios de Cataluña, que desgraciadamente sufría de una gran contaminación de basura.
             </p>
             <p>
-                Per fer el projecte vaig fer les investigacions següents:
+                Para este proyecto tuvimos que investigar un poco sobre lo tan sucio que estaba:
             </p>
             <ul>
                 <li>
-                    Vaig dur a terme un estudi de disseny, colors, teixits i tipus d’estampats  i una investigació del mercat per a descobrir quines són les tendències actuals de la moda, i s’han creat dissenys a partir d’això.
+                    Fuimos un par de veces a dar una vuelta e ir mirando, la basura que había y que tanta basura tiraba la gente al día.
                 </li>
                 <li>
-                    Vaig haver d'estudiar com evolucionar la qualitat dels dissenys i dels logotips, ja que ha sigut un procés d’autoaprenentatge per millorar les habilitats de disseny. Els programes utilitzats són Adobe Photoshop, Adobe Illustrator, Adobe Premiere Pro i Blender.
+                    La mayoría de cosas fueron bolsas de basura, plásticos que van tirando los niños y jóvenes, muebles, ruedas y en algunos lugares (sobre los puentes mayormente) jeringuillas y objetos de para el uso de protección sexual.
                 </li>
                 <li>
-                    He dut a terme una selecció de proveïdors per veure quin ens proporcionava la millor qualitat, també va relacionat amb l'estudi de costs, on es veia de quina manera es podia guanyar profit.
+                    También sobre una larga investigación sobre noticias y páginas web en internet encontramos que hace pocos años un conjunto de fábricas tuvo un accidente que causo que residuos radiactivos cayeran sobre el río, como efecto fue matando a la mayoría de peces que fueron arrastrados por el río hasta llegar a la orilla, lo único bueno que se pudo sacar de eso fue que no hubo personas heridas.
                 </li>
                 <li>
-                    L’última part, però no la menys important, he creat contingut audiovisual per publicar-se a les xarxes socials com a màrqueting, i també he desenvolupat una pàgina web per poder vendre les peces de roba.
+                    Llegamos a la conclusión de que había que hacer algo y noquearnos quietos, solo que aún somos unos estudiantes de los cuales la sociedad aún no tiene mucho en cuenta, así que lo único que podíamos hacer era difundir las noticias y exponer los hechos para que la gente vaya abriendo los ojos.
+                </li>
+                <li>
+                    ¿Dara resultado? De momento hemos visto un cambio, no uno muy grande, pero ya está empezando a haberlo, así que seguiremos con esto hasta que la situación de un cambio radical. Gracias por su atención y esperamos que no ayude.
                 </li>
             </ul>
         </article>
         <aside>
-            <p><strong>Informació addicional:</strong> Podeu consultar documents rellevants o enllaços externs aquí.</p>
+            <p><strong>Información adicional:</strong> Pueden consultar documentos relevantes o enlaces externos aquí.</p>
         </aside>
     </main>
     <footer class="footer">
-        <p>&copy; 2024 - Pàgina de Projecte. Segueix-nos a <a href="#">Xarxes Socials</a>.</p>
+        <p>&copy; 2024 - Página de proyecto. Síguenos en nuestras <a href="#">Redes Sociales</a>.</p>
     </footer>
 </body>
 </html>
